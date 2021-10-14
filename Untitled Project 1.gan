@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="dia" company="" webLink="http://" view-date="2021-10-07" view-index="0" gantt-divider-location="556" resource-divider-location="300" version="3.1.3100" locale="pt_PT">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="404" order="0"/>
+        <field id="tpd4" name="Data de início" width="76" order="1"/>
+        <field id="tpd5" name="Data de fim" width="72" order="2"/>
+        <option id="color.recent">
+            <![CDATA[#990000 #009900 #009933 #000000]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="210" order="0"/>
+        <field id="1" name="Função padrão" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Fase 1" color="#8cb6ce" meeting="false" start="2021-10-07" duration="16" complete="0" thirdDate="2021-10-14" thirdDate-constraint="0" expand="true">
+            <task id="17" name="Planeamento geral" color="#8cb6ce" meeting="false" start="2021-10-07" duration="1" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true"/>
+            <task id="3" name="Definição da arquitetura e funcionalidades do sistema" color="#8cb6ce" meeting="false" start="2021-10-07" duration="1" complete="0" thirdDate="2021-10-07" thirdDate-constraint="0" expand="true"/>
+            <task id="16" name="Identificação das tecnologias" color="#8cb6ce" meeting="false" start="2021-10-07" duration="1" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true"/>
+            <task id="19" name="Discussão das competências" color="#8cb6ce" meeting="false" start="2021-10-08" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="20" name="Diagrama de Gantt" color="#8cb6ce" meeting="false" start="2021-10-14" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="21" name="Características das interfaces de comunicação entre os módulos Arudino e entre cada módulo Arudino e o respetivo PC" color="#8cb6ce" meeting="false" start="2021-10-20" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="22" name="Parâmetros de configuração da interface de comunicação série UART/RS-232" color="#8cb6ce" meeting="false" start="2021-10-21" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="23" name="Observar a forma de onda do sinal na interface UART" color="#8cb6ce" meeting="false" start="2021-10-21" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="24" name="Efetuar as ligações físicas necessárias entre os componentes utilizados" color="#8cb6ce" meeting="false" start="2021-10-22" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="25" name="Implementar um programa no PC para transferência de dados entre dois computadores ligados por cabo via porta série" color="#8cb6ce" meeting="false" start="2021-10-25" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="26" name="Medir o tempo de transferência do ficheiro e comparar com o valor teórico" color="#8cb6ce" meeting="false" start="2021-10-26" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="31" name="Testes experimentais" color="#8cb6ce" meeting="false" start="2021-10-28" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="9" name="Fase 2" color="#000000" meeting="false" start="2021-10-29" duration="18" complete="0" thirdDate="2021-10-28" thirdDate-constraint="0" expand="false">
+            <task id="12" name="Conhecer as características da interface de comunicação série entre cada transceiver de RF (TRF) e o respetivo módulo Arduíno" color="#000000" meeting="false" start="2021-10-29" duration="1" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true"/>
+            <task id="27" name="Efetuar as ligações físicas necessárias entre os componentes utilizados" color="#000000" meeting="false" start="2021-11-01" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="28" name="Conhecer e compreender o impacto no desempenho do sistema dos diferentes parâmetros configuráveis dos transceivers de RF" color="#000000" meeting="false" start="2021-11-04" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="34" name="Desenvolvimento de código, nos módulos Arduíno, para configuração e transmissão/receção de dados dos respetivos transceivers de RF" color="#000000" meeting="false" start="2021-11-08" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="30" name="Conceção e execução de testes experimentais para avaliação de desempenho do sistema" color="#000000" meeting="false" start="2021-11-18" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="35" name="Testes experimentais" color="#000000" meeting="false" start="2021-11-23" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="10" name="Fase 3" color="#009900" meeting="false" start="2021-11-25" duration="18" complete="0" thirdDate="2021-11-25" thirdDate-constraint="0" expand="false">
+            <task id="13" name="Perceber a noção de trama/pacote, cabeçalho, payload e cauda" color="#009900" meeting="false" start="2021-11-25" duration="1" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true"/>
+            <task id="36" name="Perceber como representar a estrutura de um pacote" color="#009900" meeting="false" start="2021-11-29" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="37" name="Definir o protocolo de comunicação" color="#009900" meeting="false" start="2021-12-02" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="38" name="Definir os tipos de trama e os campos que estas necessitam de conter para proporcionar as funcionalidades desejadas" color="#009900" meeting="false" start="2021-12-07" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="39" name="Disponibilizar as primitivas às camadas superiores através de APIs" color="#009900" meeting="false" start="2021-12-13" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="40" name="Efetuar a transferência fiável de um fluxo de dados entre dois módulos Arduíno sobre a ligação RF sem fios" color="#009900" meeting="false" start="2021-12-17" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="41" name="Testes experimentais" color="#009900" meeting="false" start="2021-12-20" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="11" name="Fase 4" color="#990000" meeting="false" start="2022-01-03" duration="11" complete="0" thirdDate="2022-01-03" thirdDate-constraint="0" expand="false">
+            <task id="14" name="Implementar o protocolo de nível 7" color="#990000" meeting="false" start="2022-01-03" duration="1" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true"/>
+            <task id="42" name="Criar um programa de conversação e transferência de ficheiros que utilize o protocolo desenvolvido" color="#990000" meeting="false" start="2022-01-05" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="43" name="Criar uma interface gráfica para a aplicação" color="#990000" meeting="false" start="2022-01-07" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="44" name="Integrar as funcionalidades desenvolvidas em todas as camadas ao longo do projeto" color="#990000" meeting="false" start="2022-01-10" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="45" name="Executar os testes experimentais finais, analisando e discutindo os resultados obtidos" color="#990000" meeting="false" start="2022-01-12" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="46" name="Otimizar o desempenho do sistema, reduzindo o tempo de transferência dos ficheiros ao mínimo possível" color="#990000" meeting="false" start="2022-01-13" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="47" name="Apresentar as conclusões finais referentes ao desenvolvimento do projeto como um todo" color="#990000" meeting="false" start="2022-01-14" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+            <task id="48" name="Testes experimentais" color="#990000" meeting="false" start="2022-01-17" duration="1" complete="0" thirdDate="2021-09-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
