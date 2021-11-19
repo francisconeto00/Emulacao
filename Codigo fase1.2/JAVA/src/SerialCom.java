@@ -40,7 +40,7 @@ public class SerialCom {
          }
 
         //setComPortParameters(int newBaudRate, int newDataBits, int newStopBits, int newParity)
-        porta.setComPortParameters(9600,8,1,0);                          //default
+        porta.setComPortParameters(115200,8,1,0);                          //default
 
         int op;
             System.out.println("-----------------------------------------------------");
@@ -63,19 +63,25 @@ public class SerialCom {
 
 
         switch (op) {
-            case 1 -> {  //enviar txt
+            case 1 -> {  //enviar txt-4986
                 //enviar
+
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
-                Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\toSend.txt"), out);
-                System.out.println("out  " + out);
-                byte[] b = out.toByteArray();
                 inicio = System.currentTimeMillis();
-                porta.writeBytes(b,b.length);
+                Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\hino.txt"), out);
+                //Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\toSend.txt"), out);
+                byte[] b = out.toByteArray();
+
+                porta.writeBytes(b,385);
+
                 while(porta.bytesAwaitingWrite()>0){
                     System.out.println("a espera");
                 }
+                System.out.println("out  " + out);
                 fim = System.currentTimeMillis();
+
                 total = fim - inicio;
+                System.out.println("fim "+fim+"inicio "+inicio+ "total "+total);
                 System.out.println(total + " ms para enviar o documento de texto");
 
 
@@ -84,33 +90,36 @@ public class SerialCom {
 
             }
             case 2 -> {  //enviar png
-                inicio = System.currentTimeMillis();
+
                 //enviar
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
-                Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\foto.png"), out);
+                //Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\foto.png"), out);
+
+                Files.copy(Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\Aviao.jpg"), out);
                 System.out.println("out  " + out);
                 byte[] b = out.toByteArray();
-                porta.writeBytes(b,17608);
-
-                while(porta.bytesAwaitingWrite()>0){
+                inicio = System.currentTimeMillis();
+               porta.writeBytes(b,5120);
+                while(porta.bytesAwaitingWrite()>0) {
                     System.out.println("a espera");
                 }
-                System.out.println("b   " + Arrays.toString(b));
                 fim = System.currentTimeMillis();
+                System.out.println("b   " + Arrays.toString(b));
+
                 total = fim - inicio;
                 System.out.println(total + " ms para enviar uma imagem");
 
             }
 
-            case 3 -> { //receber txt
-                    byte[] buffer = new byte[86];
+            case 3 -> { //receber txt-4986
+                    byte[] buffer = new byte[385];
                 
                 
 
-                    while(porta.bytesAvailable()<86){
+                    while(porta.bytesAvailable()<385){
                         System.out.println(porta.bytesAvailable());
                     }
-                porta.readBytes(buffer, 86);
+                porta.readBytes(buffer, 385);
                 System.out.println(Arrays.toString(buffer));
 
                 Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\TXTRecebido.txt");
@@ -121,14 +130,14 @@ public class SerialCom {
                 Files.write(path,buffer);
                 porta.closePort();
             }
-            case 4 -> {  //receber png
-                byte[] buffer = new byte[17608];
-                while(porta.bytesAvailable()<17608){
+            case 4 -> {  //receber png-17608
+                byte[] buffer = new byte[5120];
+                while(porta.bytesAvailable()<5120){
                     System.out.println(porta.bytesAvailable());
                 }
-                porta.readBytes(buffer, 17608);
+                porta.readBytes(buffer, 5120);
                 System.out.println(Arrays.toString(buffer));
-                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\FOTORecebida.png");
+                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\FOTORecebida.jpg");
                 if(Files.exists(path)){
                     Files.delete(path);
                 }
