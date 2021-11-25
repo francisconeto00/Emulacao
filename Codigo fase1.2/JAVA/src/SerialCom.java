@@ -117,7 +117,8 @@ public class SerialCom {
                 porta.readBytes(buffer, 385);// recebe os bytes e coloca no buffer
                 System.out.println(Arrays.toString(buffer));
 
-                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\TXTRecebido.txt"); //path do destino
+
+                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\demoReceber\\hino.txt"); //path do destino
                 if(Files.exists(path)){ //se existir elimina
                     Files.delete(path);
                 }
@@ -132,7 +133,7 @@ public class SerialCom {
                 }
                 porta.readBytes(buffer, 5120);
                 System.out.println(Arrays.toString(buffer));// recebe os bytes e coloca no buffer
-                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\FOTORecebida.jpg"); //path do destino
+                Path path = Paths.get("C:\\Users\\Utilizador\\Desktop\\U.M\\demoReceber\\aviao.jpg"); //path do destino
                 if(Files.exists(path)){//se existir elimina
                     Files.delete(path);
                 }
